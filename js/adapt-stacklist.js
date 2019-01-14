@@ -26,7 +26,7 @@ define(function(require) {
             var _button = this.model.get("_button") || {};
             // Set up button aria label
 
-            if(this.model.get("_globals")._components) {
+            if(this.model.get("_globals")._components && this.model.get("_globals")._components._stacklist) {
               var btnAriaLabel = this.model.get("_globals")._components._stacklist.ariaButtonLabel || this.model.get("_globals")._accessibility._ariaLabels.next;
               console.log(btnAriaLabel);
               this.model.set({buttonAriaLabel: btnAriaLabel});
